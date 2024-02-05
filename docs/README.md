@@ -1,7 +1,7 @@
 # To Do List 
 
 ## 기능 목록
-1. Add todo 기능
+1. Add todo 기능(1)
 
 2. Delete todo 기능
 
