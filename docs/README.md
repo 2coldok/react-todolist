@@ -3,9 +3,9 @@
 ## 기능 목록
 1. Add todo 기능(1)
 
-2. Delete todo 기능
+2. Delete todo 기능(1)
 
-3. Check todo 기능
+3. Check todo 기능(1)
 
 4. Navigate 기능
 - All : 모든 todo 리스트 보여주기
