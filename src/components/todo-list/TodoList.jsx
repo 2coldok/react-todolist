@@ -7,7 +7,7 @@ const temp = [
   { id: 14, text: "운동하기", status: "active" },
 ];
 
-export default function TodoList() {
+export default function TodoList({filter}) {
   const [todos, setTodos] = useState(temp);
   const handleAdd = (todo) => setTodos([...todos, todo]);
   const handleUpdate = (updated) =>
@@ -15,10 +15,12 @@ export default function TodoList() {
   const handleDelete = (deleted) =>
     setTodos(todos.filter((todo) => todo.id !== deleted.id));
 
+  const filtered = getFilteredItems(todos, filter);  
+
   return (
     <section>
       <ul>
-        {todos.map((todo) => (
+        {filtered.map((todo) => (
           <Todo
             key={todo.id}
             todo={todo}
@@ -30,4 +32,10 @@ export default function TodoList() {
       <AddTodo onAdd={handleAdd} />
     </section>
   );
+}
+
+function getFilteredItems(todos, filter) {
+  if (filter === 'all') return todos;
+
+  return todos.filter((todo) => todo.status === filter);
 }

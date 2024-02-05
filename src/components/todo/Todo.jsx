@@ -9,7 +9,6 @@ export default function Todo({ todo, onUpdate, onDelete }) {
   }
   const handleDelete = () => onDelete(todo);
 
-
   return (
     <li>
       <input type="checkbox" id="checkbox" onChange={handleChange} checked={status === 'completed'}/>

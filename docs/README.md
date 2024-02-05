@@ -7,9 +7,9 @@
 
 3. Check todo 기능(1)
 
-4. Navigate 기능
-- All : 모든 todo 리스트 보여주기
+4. Filter 기능(1)
+- All : 모든 todo 리스트 보여주기 
 - Active : 진행중인 todo(완료되지 않은) 리스트 보여주기
 - Completed : 완료된 todo 리스트 보여주기
 
-5. 다크모드 기능
+5. 다크모드 기능`1
