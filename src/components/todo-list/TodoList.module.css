@@ -1,0 +1,16 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+
+  /*list 에 있는 글들이 많아지면 위아래 컨텐츠들이(navbar, addinput) 위로 밀려난다. 이를 방지하기 위한 작업*/
+  /*기본 적으로 flex 아이템 min-height 이 100%로 지정되어 있다.*/
+  min-height: 0;
+}
+
+.list {
+  background-color: var(--color-white);
+  flex: 1 1 auto; /*grow 빼고 다 default 값이라 그냥 flex-grow: 1; 만 해줘도 결과는 동일하다*/ 
+  overflow-y: auto;/*내용이 넘칠때 어떻게 보일지 설정. auto 의 경우 내용이 넘치면 잘림. 필요에 따라 스크롤바가 생김*/
+}

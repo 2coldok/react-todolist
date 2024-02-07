@@ -1,0 +1,43 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.filters {
+  display: flex; /*이걸 해줘야 nav 버튼들이 가로로 줄을 섬 */
+
+}
+
+.filter {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  text-transform: capitalize;
+  background-color: transparent;
+  color: var(--color-accent);
+  opacity: 0.8; /*선택 되지 않은 버튼*/
+  font-weight: bold;
+}
+
+.filter:hover {
+  opacity: 1;
+}
+
+.filter.sex {
+  opacity: 1;
+}
+
+.filter.sex::after {
+  /*display block 을 하지 않으면 버튼 가상요소는 All, Active, Completed
+  바로 오른쪽에 달라 붙게되고 그들이 다시 전체 버튼이 된다*/
+  /*display block을 줘서 가상요소를 밑으로 내리고 content 를 공백으로 주게되어
+  버튼 요소들 아래에 밑줄이 쳐진 효과를 낼 . 수있다.*/
+  /*가상요소가 한블럭을 다 차지하기 위해 강제로 밑으로 내려가게 되는거임*/
+  display: block;
+  content: '';
+  margin-top: 0.2rem;
+  border: 1px solid var(--color-text);
+}
